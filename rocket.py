@@ -1,7 +1,7 @@
 import requests
 from datetime import datetime
 
-
+# Function to retrieve upcoming space launches from the API
 def get_upcoming_launches():
     url = "https://ll.thespacedevs.com/2.2.0/launch/upcoming/"
     response = requests.get(url)
@@ -13,6 +13,7 @@ def get_upcoming_launches():
     else:
         return None
 
+# Function to display information about the upcoming space launches
 def display_launches(launches):
     print("\nUpcoming Space Launches:")
 
@@ -46,6 +47,7 @@ def main():
         else:
             print("Invalid input. Please enter 'track' or 'exit'.")
 
+# Run the main function if the script is executed
 if __name__ == "__main__":
     main()
 
