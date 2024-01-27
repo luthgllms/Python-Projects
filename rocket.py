@@ -27,7 +27,11 @@ def display_launches(launches):
         print(f"Net Launch Date: {net_date}")
         print(f"Launch Window Start: {window_start}")
 
+def main():
+    print("welcome to the Upcoming Space Launches Tracker!")
 
+    while True:
+        user_input = input ("\nEnter 'track' to get upcoming space launches or 'exit' to quit: ").lower()
 
 
 
