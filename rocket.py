@@ -22,5 +22,12 @@ def display_launches(launches):
         window_start = launch.get("window_start", "")
         rocket_name = launch.get("rocket", {}).get("configuration", {}).get("name", "Unknown Rocket")
 
+        print(f"\nLaunch Name: {name}")
+        print(f"Rocket: {rocket_name}")
+        print(f"Net Launch Date: {net_date}")
+        print(f"Launch Window Start: {window_start}")
+
+
+
 
 
