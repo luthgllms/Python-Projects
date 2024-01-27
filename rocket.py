@@ -19,5 +19,7 @@ def display_launches(launches):
     for launch in launches:
         name = launch.get("name", "Unnamed Launch")
         net_date = launch.get("net", "")
+        window_start = 
+
 
 
