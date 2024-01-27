@@ -18,3 +18,11 @@ def fetch_stock_data(api_key, symbol, interval='1d', output_size='compact'):
     data, meta_data = ts.get_daily(symbol=symbol, outputsize=output_size)
     return data
 
+def plot_stock_data(stock_data):
+    """
+    Plot stock data using Matplotlib.
+    :param stock_data: Pandas DataFrame with stock data
+    """
+    plt.figure(figsize=(12,6))
+    plt.plot(stock_data)
+
