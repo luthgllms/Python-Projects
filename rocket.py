@@ -3,7 +3,7 @@ from datetime import datetime
 
 
 def get_upcoming_launches():
-    url = "https://11.thespacedevs.com/2.2.0/launch/upcoming/"
+    url = "https://ll.thespacedevs.com/2.2.0/launch/upcoming/"
     response = requests.get(url)
     data = response.json()
 
@@ -28,10 +28,26 @@ def display_launches(launches):
         print(f"Launch Window Start: {window_start}")
 
 def main():
-    print("welcome to the Upcoming Space Launches Tracker!")
+    print("Welcome to the Upcoming Space Launches Tracker!")
 
     while True:
         user_input = input ("\nEnter 'track' to get upcoming space launches or 'exit' to quit: ").lower()
+
+        if user_input == 'exit':
+            print("Exiting the Upcoming Space Launches Tracker. Goodbye!")
+            break
+        elif user_input == 'track':
+            upcoming_launches = get_upcoming_launches()
+
+            if upcoming_launches:
+                display_launches(upcoming_launches)
+            else:
+                print("Unable to retrieve upcoming launches. Please try again.")
+        else:
+            print("Invalid input. Please enter 'track' or 'exit'.")
+
+if __name__ == "__main__":
+    main()
 
 
 
