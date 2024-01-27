@@ -17,5 +17,7 @@ def display_launches(launches):
     print("\nUpcoming Space Launches:")
 
     for launch in launches:
-        
+        name = launch.get("name", "Unnamed Launch")
+        net_date = launch.get("net", "")
+
 
