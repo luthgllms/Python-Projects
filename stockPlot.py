@@ -13,6 +13,8 @@ def fetch_stock_data(api_key, symbol, interval='1d', output_size='compact'):
     :param api_key: Alpha Vantage API api_key
     :param symbol: Stock symbol
     :param interval: Data interval(default is '1d' for daily)
+    :param output_size: Output size ('compact' for 100 data points, 'full' for all)
+    return: Pandas DataFrame with stock data
     """
     ts = TimeSeries(key=api_key, output_format='pandas')
     data, meta_data = ts.get_daily(symbol=symbol, outputsize=output_size)
