@@ -30,6 +30,14 @@ def plot_stock_data(stock_data):
     plt.ylabel('Closing Price (USD)')
     plt.legend()
     plt.grid(True)
-    plt.show
+    plt.show()
+
+    def main():
+        stock_data = fetch_stock_data(API_KEY, symbol)
+        plot_stock_data(stock_data)
+
+    if _ _name_ _ == "_ _main_ _":
+        main()
+
 
 
