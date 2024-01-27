@@ -1,10 +1,10 @@
 # Stock Visualization 
 
-import matplotlib.pylot as plt
-from alpha_vantage.timeseries import timeseries
+import matplotlib.pyplot as plt
+from alpha_vantage.timeseries import TimeSeries
 import pandas as pd
 
-API_KEY = 
+API_KEY = 'TE7TY30VEWVGWQ64'
 symbol = 'AMZN'
 
 def fetch_stock_data(api_key, symbol, interval='1d', output_size='compact'):
@@ -26,20 +26,20 @@ def plot_stock_data(stock_data):
     :param stock_data: Pandas DataFrame with stock data
     """
     plt.figure(figsize=(12,6))
-    plt.plot(stock_data['4. close'], label='Closing Price', color='blue'),
-    plt.title(f'Stock Price Overt Time - {symbol}')
+    plt.plot(stock_data['4. close'], label='Closing Price', color='blue')
+    plt.title(f'Stock Price Over Time - {symbol}')
     plt.xlabel('Date')
     plt.ylabel('Closing Price (USD)')
     plt.legend()
     plt.grid(True)
     plt.show()
 
-    def main():
-        stock_data = fetch_stock_data(API_KEY, symbol)
-        plot_stock_data(stock_data)
+def main():
+    stock_data = fetch_stock_data(API_KEY, symbol)
+    plot_stock_data(stock_data)
 
-    if _ _name_ _ == "_ _main_ _":
-        main()
+if __name__ == "__main__":  
+    main()
 
 
 
