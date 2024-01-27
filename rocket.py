@@ -12,3 +12,10 @@ def get_upcoming_launches():
         return launches
     else:
         return None
+
+def display_launches(launches):
+    print("\nUpcoming Space Launches:")
+
+    for launch in launches:
+        
+
