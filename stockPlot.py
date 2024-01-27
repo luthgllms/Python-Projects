@@ -24,5 +24,12 @@ def plot_stock_data(stock_data):
     :param stock_data: Pandas DataFrame with stock data
     """
     plt.figure(figsize=(12,6))
-    plt.plot(stock_data)
+    plt.plot(stock_data['4. close'], label='Closing Price', color='blue'),
+    plt.title(f'Stock Price Overt Time - {symbol}')
+    plt.xlabel('Date')
+    plt.ylabel('Closing Price (USD)')
+    plt.legend()
+    plt.grid(True)
+    plt.show
+
 
